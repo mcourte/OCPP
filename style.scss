@@ -1,0 +1,127 @@
+/*Définitions des variables*/
+$main-background-color: grey;
+
+/*Définitions des mixins*/
+
+
+html{
+background-color: $main-background-color;
+}
+
+header,
+footer{
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 1.5em;
+  margin-right: 20px;
+}
+
+main{
+  font-family: 'titillium', sans-serif;
+  margin : 10px;
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 3.5em;
+  font-family: 'Montserrat', sans-serif;
+  color : #E6DBE6 ; 
+  background: linear-gradient(90deg, #EF73F3, #DF9FE1 );
+  border-radius : 20px 90px 20px 90px; 
+  box-shadow: 6px 6px 25px rgba(0,0,0,0.5);
+  text-align: center;
+  text-shadow: .4rem .4rem #8B798B;
+}
+
+strong{
+  color: red ;
+}
+
+a {
+  color: #242424;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar a {
+  margin-left: 15px;
+}
+
+
+.photo-container-link {
+    display : flex ;
+    justify-content:center;
+    align-items: center;
+    position : relative;
+   }
+.photo-hover {
+    position: absolute;
+    top: 0;
+    left: 680px;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    display : none ;
+    width: 480px;
+}
+   
+.photo-container-link:hover .photo-hover {
+          display: flex;
+        }       
+
+fieldset{
+  border-color: #8788ba;
+  background-color: #f5e5f5 ;
+}        
+
+legend{
+  font-size : 1.5em;
+  color : #DF9FE1 
+}
+
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg,#EF73F3, #DF9FE1 );
+  color: #E6DBE6 ;
+  border-radius: 20px;
+  padding: 10px 10px;
+  text-align: center;
+}
+
+.btn__formulaire{
+  display: inline-block;
+  background: linear-gradient(90deg,#EF73F3, #DF9FE1 );
+  color: #E6DBE6 ;
+  font-size : 1.5em;
+  border-radius: 20px;
+  padding: 15px 15px;
+  text-align: center;
+}
+
+.btn__formulaire:hover {
+  background: linear-gradient(#696484, #8788ba);
+  text-decoration: none;
+}
+
+
+.btn:hover {
+  background: linear-gradient(#696484, #8788ba);
+  text-decoration: none;
+}

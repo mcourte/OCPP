@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" >
+    <title>Formulaire - Analyse résultats prise de sang</title>
+    <link rel="stylesheet" media="screen" href="style.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&family=Titillium+Web&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="images/logo-site.png" alt="Logo Site" width="5%" height="5%" >
+                <div>
+                    <a href="accueil.html">Accueil</a>
+                    <a href="formulaire.html">Simulateur</a>
+                    <a href="a-propos.html">À propos</a>
+                </div>
+        </nav>
+    </header>
+    <main >
+        <h1>Simulateur d'analyse de résultats de prise de sang</h1>
+                <p>
+                Veuillez rentrer dans chaque case correspondante, vos résultats d'analyse de prise de sang. Attention aux unités.                 
+                </p>
+        <form method="post" action="resultats.py">
+            <fieldset>
+                <legend>Hémogramme</legend>    
+                <ul><label for="hematies">Hématies (T/L)</label> : <input type="number" name="hematies" id="hematies"></ul>
+                <ul><label for="hemoglobines">Hémoglobines (g/dL)</label> : <input type="number" name="hemoglobines" id="hemoglobines"></ul>
+                <ul><label for="hematocrites">Hématocrites (%)</label> : <input type="number" name="hematocrites" id="hematocrites"></ul>
+                <ul><label for="VGM">VGM (fL)</label> : <input type="number" name="VGM" id="VGM"></ul>
+                <ul><label for="TCMH">TCMH (pg) </label> : <input type="number" name="TCMH" id="TCMH"></ul>
+                <ul><label for="CCMH">CCMH (g/dL)</label> : <input type="number" name="CCMH" id="CCMH"></ul>
+                <ul><label for="Leucocytes">Leucocytes (G/L) </label> : <input type="number" name="Leucocytes" id="Leucocytes"></ul>
+                <ul><label for="neutrophiles">Polynucléaires neutrophiles (G/L)</label> : <input type="number" name="neutrophiles" id="neutrophiles"></ul>
+                <ul><label for="eosinophiles">Polynucléaires eosinophiles (G/L)</label> : <input type="number" name="eosinophiles" id="eosinophiles"></ul>
+                <ul><label for="basophiles">Polynucléaires basophiles (G/L)</label> : <input type="number" name="basophiles" id="basophiles"></ul>
+                <ul><label for="Lymphocytes">Lymphocytes (G/L)</label> : <input type="number" name="Lymphocytes" id="Lymphocytes"></ul>
+                <ul><label for="Monocytes">Monocytes (G/L)</label> : <input type="number" name="Monocytes" id="Monocytes"></ul>
+                <ul><label for="Plaquettes">Plaquettes (G/L) </label> : <input type="number" name="Plaquettes" id="Plaquettes"></ul>
+                <ul><label for="Cholesterol">Cholestérol (g/L)</label> : <input type="number" name="Cholesterol" id="Cholesterol"></ul>
+                <ul><label for="Triglycerides">Triglycérides (g/L)</label> : <input type="number" name="Triglycerides" id="Triglycerides"></ul>
+                <ul><label for="HDL">HDL Cholesthérol (g/L)</label> : <input type="number" name="HDL" id="HDL"></ul>
+            </fieldset>
+            <fieldset>
+                <legend>Biochimie Sanguine</legend>  
+                <ul><label for="Glycemie">Glycémie à jeun (g/L) </label> : <input type="number" name="Glycemie" id="Glycemie"></ul>
+                <ul><label for="Sodium">Sodium (mmol/L) </label> : <input type="number" name="Sodium" id="Sodium"></ul>
+                <ul><label for="Potassium">Potassium (mmol/L) </label> : <input type="number" name="Potassium" id="Potassium"></ul>
+                <ul><label for="Creatinine">Créatinine (mg/L)</label> : <input type="number" name="Creatinine" id="Creatinine"></ul>
+                <ul><label for="MRD">Clairance MRD (mL/min/1.73m²)</label> : <input type="number" name="MRD" id="MRD"></ul>
+                <ul><label for="CDK-EPI">Clairance CDK-EPI (mL/min/1.73m²)</label> : <input type="number" name="CDKEPI" id="CDKEPI"></ul>
+                <ul><label for="Bilirubine">Bilirubine totale (mg/L)</label> : <input type="number" name="Bilirubine" id="Bilirubine"></ul>
+            </fieldset>
+            <fieldset>
+                <legend>Enzymologie Sanguine</legend>  
+                <ul><label for="TGO">Transaminases TGO (ASAT) (U/L)</label> : <input type="number" name="TGO" id="TGO"></ul>
+                <ul><label for="TGP">Transaminases TGP (ALAT) (U/L)</label> : <input type="number" name="TGP" id="TGP"></ul>
+                <ul><label for="Gamma">Gamma GT (U/L)</label> : <input type="number" name="Gamma" id="Gamma"></ul>
+                <ul><label for="PAL">Phosphatases alcalines (PAL) (U/L)</label> : <input type="number" name="PAL" id="PAL"></ul>
+            </fieldset>
+            <fieldset>
+                <legend>Protéines - Vitamines - Marqueurs</legend>  
+                <ul><label for="Ferritine">Ferritine (ng/mL) </label> : <input type="number" name="Ferritine" id="Ferritine"></ul>
+            </fieldset>
+            <fieldset>
+                <legend>Hormonologie Sanguine</legend>  
+                <ul><label for="TSH">TSH (mUI/L)</label> : <input type="number" name="TSH" id="TSH"></ul>
+            </fieldset>
+            <input class="btn__formulaire" type="submit" value="Envoyer">
+        </form>
+    </main>
+    <footer>
+        <a href="mailto:courte.magali@gmail.com" class="btn">Une question sur le site? Ecrivez moi</a>
+    </footer>
+</body>
+
+</html>
