@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/*Définitions des variables*/
+/*Définitions des mixins*/
+html {
+  background-color: #E8EBF0;
+}
+
+header,
+footer {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5em;
+  margin-right: 20px;
+}
+
+main {
+  font-family: "titillium", sans-serif;
+  margin: 10px;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-family: "Bebas Neue", sans-serif;
+  color: #E8EBF0;
+  background: linear-gradient(90deg, #8DACF5, #3867D5);
+  border-radius: 20px 90px 20px 90px;
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  text-shadow: 0.4rem 0.4rem #7c8daa;
+}
+
+strong {
+  color: red;
+}
+
+a {
+  color: #242424;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar a {
+  margin-left: 15px;
+}
+
+.photo-container-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.photo-hover {
+  position: absolute;
+  top: 0;
+  left: 680px;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  width: 480px;
+}
+
+.photo-container-link:hover .photo-hover {
+  display: flex;
+}
+
+fieldset {
+  border-color: #3867D5;
+  background-color: #ebf0fd;
+}
+
+legend {
+  font-size: 1.5em;
+  color: #0b2b78;
+}
+
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg,#8DACF5, #3867D5 );
+  color: #E6DBE6 ;
+  border-radius: 20px;
+  padding: 10px 10px;
+  text-align: center;
+}
+
+.btn__formulaire{
+  display: inline-block;
+  background: linear-gradient(90deg,#8DACF5, #3867D5 );
+  color: #E6DBE6 ;
+  border-radius: 20px;
+  padding: 15px 15px;
+  text-align: center;
+}
+
+.btn__formulaire:hover {
+  background: linear-gradient(#134dd6, #1d3e8a);
+  text-decoration: none;
+}
+
+
+.btn:hover {
+  background: linear-gradient(#134dd6, #1d3e8a);
+  text-decoration: none;
+}

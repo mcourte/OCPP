@@ -103,43 +103,43 @@ app = Flask(__name__)
 
 @app.route('/formulaire', methods=['POST', 'GET'])
 def result():
-    return ''''''''''''''''''''''
-            <form method="POST"Potassium>    
-                <label> Hématies (T/L)</label> : <input type="number" name="hematies" id="hematies">
-                <label> Hémoglobines (g/dL)</label> : <input type="number" name="hemoglobines" id="hemoglobines">
-                <label> Hématocrites (%)</label> : <input type="number" name="hematocrites" id="hematocrites">
-                <label> VGM (fL)</label> : <input type="number" name="VGM" id="VGM">
-                <label> TCMH (pg) </label> : <input type="number" name="TCMH" id="TCMH">
-                <label> CCMH (g/dL)</label> : <input type="number" name="CCMH" id="CCMH">
-                <label> Leucocytes (G/L) </label> : <input type="number" name="Leucocytes" id="Leucocytes">
-                <label> Polynucléaires neutrophiles (G/L)</label> : <input type="number" name="neutrophiles" id="neutrophiles">
-                <label> Polynucléaires eosinophiles (G/L)</label> : <input type="number" name="eosinophiles" id="eosinophiles">
-                <label> Polynucléaires basophiles (G/L)</label> : <input type="number" name="basophiles" id="basophiles">
-                <label> Lymphocytes (G/L)</label> : <input type="number" name="Lymphocytes" id="Lymphocytes">
-                <label> Monocytes (G/L)</label> : <input type="number" name="Monocytes" id="Monocytes">
-                <label> Plaquettes (G/L) </label> : <input type="number" name="Plaquettes" id="Plaquettes">
-                <label> Cholestérol (g/L)</label> : <input type="number" name="Cholesterol" id="Cholesterol">
-                <label>Triglycérides (g/L)</label> : <input type="number" name="Triglycerides" id="Triglycerides">
-                <label>HDL Cholesthérol (g/L)</label> : <input type="number" name="HDL" id="HDL">
-                <label>Glycémie à jeun (g/L) </label> : <input type="number" name="Glycemie" id="Glycemie">
-                <label>Sodium (mmol/L) </label> : <input type="number" name="Sodium" id="Sodium">
-                <label>Potassium (mmol/L) </label> : <input type="number" name="Potassium" id="Potassium">
-                <label>Créatinine (mg/L)</label> : <input type="number" name="Creatinine" id="Creatinine">
-                <label>Clairance MRD (mL/min/1.73m²)</label> : <input type="number" name="MRD" id="MRD">
-                <label>Clairance CDK-EPI (mL/min/1.73m²)</label> : <input type="number" name="CDKEPI" id="CDKEPI">
-                <label>Bilirubine totale (mg/L)</label> : <input type="number" name="Bilirubine" id="Bilirubine"> 
-                <label>Transaminases TGO (ASAT) (U/L)</label> : <input type="number" name="TGO" id="TGO">
-                <label>Transaminases TGP (ALAT) (U/L)</label> : <input type="number" name="TGP" id="TGP">
-                <label>Gamma GT (U/L)</label> : <input type="number" name="Gamma" id="Gamma">
-                <label>Phosphatases alcalines (PAL) (U/L)</label> : <input type="number" name="PAL" id="PAL"> 
-                <label> Ferritine (ng/mL) </label> : <input type="number" name="Ferritine" id="Ferritine">
-                <label> TSH (mUI/L)</label> : <input type="number" name="TSH" id="TSH">
-            </form>    '''''''''''''''''''''
+    if request.method == 'POST':
+        hematies = request.form.get('hematies')
+        hemoglobines = request.form.get('hemoglobines')
+        hematocrites = request.form.get('hematocrites')
+        VGM = request.form.get('VGM')
+        TCMH= request.form.get('TCMH')
+        CCMH = request.form.get('CCMH')
+        Leucocytes = request.form.get('Leucocytes')
+        neutrophiles = request.form.get('neutrophiles')
+        eosinophiles = request.form.get('eosinophiles')
+        basophiles = request.form.get('basophiles')
+        Lymphocytes = request.form.get('Lymphocytes')
+        Monocytes = request.form.get('Monocytes')
+        Plaquettes = request.form.get('Plaquettes')
+        Cholesterol = request.form.get('Cholesterol')
+        Triglycerides = request.form.get('Triglycerides')
+        HDL = request.form.get('HDL')
+        Glycemie = request.form.get('Glycemie')
+        Sodium = request.form.get('Sodium')
+        Potassium = request.form.get('Potassium')
+        Creatinine = request.form.get('Creatinine')
+        MRD = request.form.get('MRD')
+        CDKEPI = request.form.get('CDKEPI')
+        Bilirubine = request.form.get('Bilirubine')
+        TGO = request.form.get('TGO')
+        TGP = request.form.get('TGP')
+        Gamma = request.form.get('Gamma')
+        PAL = request.form.get('PAL')
+        Ferritine = request.form.get('Ferritine')
+        TSH = request.form.get('TSH')
+        return 
+       
 
 #Création d'une boucle type pour analyse d'un résultat
 
 if hematies_min >= hematies <= hematies_max :
-    print("Votre taux de {id} est normal")
+    print("Votre taux de {format} est normal")
 elif hematies <= hematies_min : 
     print("Votre taux de {name} est trop bas")
 elif hematies >= hematies_max :
